@@ -6,7 +6,7 @@
 int main()
 {
     unsigned int n, i, ok = 0, j, k, cnt, cnt_raspuns = 0;
-    bool flag = true, repeta;
+    bool flag = true;
     char s[100], first[100];
     printf("introduceti numarul de cuvinte : ");
     scanf("%u", &n);
@@ -14,16 +14,14 @@ int main()
     printf("introduceti cuvintele pe rand : ");
     for(i = 0; i < n; i++)
     {
-        repeta = true; // variabila pentru a nu il verifica pe primul cu primul pe linia 26
         fgets(s, 100, stdin);
         s[strcspn(s, "\n")] = '\0';
         if(ok == 0)
         {
             strcpy(first, s);
             ok = 1;
-            repeta = false;
         }
-        if(ok == 1 && repeta == true)
+        if(ok == 1 && i != 0)
         {
             if(strlen(s) == strlen(first))
             {
