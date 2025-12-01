@@ -28,6 +28,6 @@ void interschimbare(char *a, char *b)
 void swap_2(char s[])
 {
     unsigned int i;
-    for(i = 0; i < strlen(s); i += 2)
+    for(i = 0; i < strlen(s) - 1; i += 2)
         interschimbare(&s[i], &s[i + 1]);
 }
