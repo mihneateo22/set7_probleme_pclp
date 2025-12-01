@@ -20,7 +20,7 @@ int main()
             j = i + 1;
             k = 1;
             length = 1;
-            while(b[k] != '\0' && a[j] == b[k])
+            while(b[k] != '\0' && a[j] != '\0' && a[j] == b[k])
             {
                 length++;
                 j++;
